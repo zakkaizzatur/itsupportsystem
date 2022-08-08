@@ -17,6 +17,9 @@ const ECommercePage = lazy(() =>
 const UserProfilepage = lazy(() =>
   import("./modules/UserProfile/UserProfilePage")
 );
+const ITAssetManagementPage = lazy(() => 
+  import("./modules/ITAssetManagement/pages/eCommercePage")
+);
 
 export default function BasePage() {
   // useEffect(() => {
@@ -38,6 +41,7 @@ export default function BasePage() {
         <Route path="/react-bootstrap" component={ReactBootstrapPage} />
         <Route path="/e-commerce" component={ECommercePage} />
         <Route path="/user-profile" component={UserProfilepage} />
+        <Route path="/it-asset-management" component={ITAssetManagementPage} />
         <Redirect to="error/error-v1" />
       </Switch>
     </Suspense>
